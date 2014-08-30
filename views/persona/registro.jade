@@ -3,73 +3,14 @@ extends ../layout
 
 block content
   .container
-
-    .h2 ¿Sabías que todos podemos aprender música en Medellín?
-    .h3 Si tienes entre 7 y 18 años, y eres de los que sigue el ritmo con los pies cuando escuchas una canción, esto puede interesarte:
-    .h4 Medellín vive la música te ofrece el espacio para encontrarte con otras personas como tu que quieren crear su propio ritmo.
-    .p <br>
-    .h4 Acércate a tu sede más cercana y participa de nuestros encuentros de música, ensamble y creación. Asiste a tu primera clase y empieza tu travesía con nosotros en el universo Medellín Vive la Música.
-      .h3 Sedes disponibles:
-      .col-md-12
-        select.selectpicker.col-md-12(name="nodos", value="", data-live-search="true", data-container="body")
-          - each nodo in nodos
-            option(data-id=nodo.id) #{nodo.nombre}
-    .p <br><br><br><br><hr>
-    .h2 Registrarse
-
     .jumbotron.hero-spacer
-      form(role="form", method="POST", action="/persona/create", name = "persona")
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="nombre") Nombre:
-              input.form-control(type="text", value="", name="nombre", placeholder="nombre")
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="telefonos") Teléfono:
-              input.form-control(type="text", value="", name="telefonos", placeholder="telefonos")
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="correo") Correo electrónico
-              input.form-control(type="text", value="", name="correo", placeholder="correo")
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="institucionEducativa") Institución Educativa
-              input.form-control(type="text", value="", name="institucionEducativa", placeholder="institucionEducativa")
-
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="sexo") Sexo
-              select.selectpicker.col-md-12(name="sexo", value="", data-live-search="true", data-container="body")
-                option Mujer
-                option Hombre
-
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="documento") Documento de identidad
-              input.form-control(type="text", value="", name="documento", placeholder="documento de identidad")
-
-        .row
-          fieldset
-            .col-md-12
-              label.control-label(for="nodos") Nodo más cercana a su lugar de residencia
-            .col-md-12
-              select.selectpicker.col-md-12(name="nodos", value="", data-live-search="true", data-container="body")
-                - each nodo in nodos
-                  option(data-id=nodo.id) #{nodo.nombre}
-
-          br
-          .row
-            .col-md-6
-              input.btn.btn-lg.btn-danger.btn-block(type="button", onclick="javascript:history.back()", value="Cancelar")
-            .col-md-6
-              input.btn.btn-lg.btn-primary.btn-block(value="Guardar", name="crearPersona", type="button")
-          br
-          .row
-            .col-md-12
-              input.btn.btn-lg.btn-success.btn-block(type="button", onclick="javascript:window.location = \"/taller\"" value="¿Ya está registrado?")
+      .h2 ¿Sabías que todos podemos aprender música en Medellín?
+      .h3 Si tienes entre 7 y 18 años, y eres de los que sigue el ritmo con los pies cuando escuchas una canción, esto puede interesarte:
+      .h4 Medellín vive la música te ofrece el espacio para encontrarte con otras personas como tu que quieren crear su propio ritmo.
+      .p <br>
+      .h4 Acércate a tu sede más cercana y participa de nuestros encuentros de música, ensamble y creación. Asiste a tu primera clase y empieza tu travesía con nosotros en el universo Medellín Vive la Música.
+        .h3 Sedes disponibles:
+        .col-md-12
+          select.selectpicker.col-md-12(name="nodos", value="", data-live-search="true", data-container="body")
+            - each nodo in nodos
+              option(data-id=nodo.id) #{nodo.nombre}

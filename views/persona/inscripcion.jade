@@ -37,16 +37,6 @@ block content
       input#deletebtn_6.delconfirmbtn6.btn.btn-sm.btn-danger(type="button", onclick="$('.delconfirmbtn6').toggleClass('hidden');", value="Delete")
       input#confirm_btn6.delconfirmbtn6.btn.btn-sm.btn-danger.hidden(type="submit", value="Confirm")
 
-  //
-    nombre: { type:'STRING'},
-        telefonos: { type: 'STRING'},
-        correo : { type: 'STRING'},
-        institucionEducativa : { type : 'STRING' },
-        inscritoEn : {
-          collection : 'Taller',
-          via : 'inscritos',
-          dominant : 'true'
-
       .row
         p
           a.btn.btn-primary.btn-large Call to action!
